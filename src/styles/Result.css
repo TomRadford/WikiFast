@@ -48,6 +48,13 @@
 }
 
 .result-thumbnail-no-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.result-thumbnail-no-img img {
     width: 100px;
     border-radius: 10px;
     background-color: rgb(49, 49, 49);

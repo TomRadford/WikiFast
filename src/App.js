@@ -32,6 +32,7 @@ const App = () => {
 
   const reset = () => {
     setDebouncedTerm('')
+    setSearchBarTerm('')
     setLoading(0)
     setResults([])
   }

@@ -1,25 +1,25 @@
 import '../styles/Result.css'
 import Image from '../components/Image'
 
-const getImage = ( result ) => {
+const getImage = (result) => {
     try {
-        return <Image 
-        alt={result.description} 
-        src={result.thumbnail.url} 
-        className='result-thumbnail' 
+        return <Image
+            alt={result.description}
+            src={result.thumbnail.url}
+            className='result-thumbnail'
         />
     } catch {
-        return (
-            <div className='result-thumbnail-no-img' >
-                <img src='/Wikipedia_logo_v3.svg' alt='Wikipedia logo' />
-            </div >
-        )
+        return <Image
+            alt='Wikipedia logo'
+            src='/Wikipedia_logo_v3.svg'
+            className='result-thumbnail-no-img'
+        />
     }
 }
 
 const Result = ({ result }) => {
 
-    
+
     return (
         <div className='result'>
             <div className='result-text'>

@@ -1,7 +1,8 @@
 # WikiFast! 
 
 Simple search app using Wikipedia's REST API
-[Deployed here](https://link.to)
+
+## [See it in action here](https://wikifast.netlify.app/)
 
 ## Why?
 

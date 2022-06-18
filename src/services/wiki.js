@@ -14,7 +14,8 @@ const searchQuery = memoize(async (query) => {
     return response.data
 })
 
-
-export default {
+const exports = {
     searchQuery
 }
+
+export default exports

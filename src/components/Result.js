@@ -1,5 +1,4 @@
 import '../styles/Result.css'
-import { useRef } from 'react'
 import Image from '../components/Image'
 
 const getImage = ( result ) => {

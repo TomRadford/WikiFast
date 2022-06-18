@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy } from 'react'
 import { Link, Outlet, Route, Routes } from 'react-router-dom'
 import './styles/App.css'
 import SearchBar from './components/SearchBar'
 import Home from './components/Home'
 import wikiService from './services/wiki'
-import Results from './components/Results'
 import { Spinner } from './components/Atoms/Spinner'
+const Results = lazy(() => import('./components/Results'))
 
 const App = () => {
   const [results, setResults] = useState([])
@@ -13,6 +13,8 @@ const App = () => {
   const [term, setTerm] = useState('')
   const [debouncedTerm, setDebouncedTerm] = useState('')
   const [searchBarTerm, setSearchBarTerm] = useState('')
+
+  
 
   const onSearchSubmit = async term => {
     const res = await wikiService.searchQuery(term)

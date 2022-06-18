@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# WikiFast! 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Simple search app using Wikipedia's REST API
+[Deployed here](https://link.to)
 
-## Available Scripts
+## Why?
 
-In the project directory, you can run:
+Created as a fun way to wrap my head around various concepts learnt though [Full Stack Open](https://fullstackopen.com/en) 
 
-### `npm start`
+## How?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I used React, Router and one or two packages to build this along with vanilla CSS. I wanted to wrap my hea around memoization and debouncing so that's been implemented here too. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The memoization is very trival - having just wrapped the API query in Lodash's memoize function. 
+Debouncing has been done by setting a 1 second delay everytime the search bar value changes. 
 
-### `npm test`
+Search history as well as rendering results from `/results/:urlTerm` URL has also been implemented though setting state based on URL params. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Room for improvement
 
-### `npm run build`
+I started implimenting the atomic structure with the Spinner component, while also trying out styled components. I have not utilized this methodology for the rest of the project due to the lack of the need for it at this scale. However, I hope to refactor with this in the future. Moving state management to Redux in order to prevent prop drilling through the Layout will also be implemented in the future.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

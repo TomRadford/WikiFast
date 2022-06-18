@@ -1,0 +1,30 @@
+.searchbar {
+    width: 100%;
+    padding: 0 5%; 
+    display: flex;
+    bottom: 0;
+}
+.searchbar-input {
+    width: 100%;
+    padding: 11px 12px;
+    background-color: rgba(0, 0, 0, 0.815);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.searchbar-input:focus {
+    outline: none;
+}
+
+@media (max-width: 880px)  { 
+    .searchbar-input {
+        padding: 12px 22px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .searchbar {
+      width: 1300px;
+    }
+  }

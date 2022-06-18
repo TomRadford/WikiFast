@@ -1,0 +1,80 @@
+@keyframes fade-in {
+    0% {
+       opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.result {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    padding: 10px 1px;
+    border-bottom: solid;
+    border-width: 1px;
+    margin-bottom: 5px;
+    border-color: rgb(54, 54, 54);
+    animation-name: fade-in;
+    animation-duration: 1s;
+}
+
+.result:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 580px ) {
+    .result {
+        width: 300px;
+    }
+    .result-description {
+        width: 170px;
+    }
+}
+
+
+.result-thumbnail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.result-thumbnail img { 
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.result-thumbnail-no-img {
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(49, 49, 49);
+    padding: 5px;
+
+}
+
+.result-thumbnail-no-img img {
+    width: 100%;
+    filter: brightness(0.8) grayscale(100%);
+}
+
+.result-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-title {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.result-description {
+    padding-top: 5px;
+    padding-right: 5px;
+    font-weight: 300;
+    font-size: 15px;
+    font-style: italic;
+    max-width: 370px;
+}

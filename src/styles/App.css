@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+.app {
+  color: white;
+  margin: 0px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: center;
+  background: rgba(19, 19, 19, 0.596);
+  z-index: 100;
+}
+
+
+.title {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+.main-content {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 500px;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.welcome .lottie {
+  margin-top: 50px;
+  width: 70%;
+  max-width: 800px;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+@media (max-width: 880px) {
+  .main-content {
+
+  }
+
+  .welcome .lottie {
+    width: 80%;
+  }
+
+  .title {
+    font-size: 20pt;
+  }
+  .header {
+    height: 110px;
+  }
+}
+
+.tom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  color:rgb(224, 224, 224);
+  margin-bottom: 25px;
+}
+
+
+
+@media (max-width: 400px) {
+  .main-content {
+    min-height: 400px;
+  }
+  .tom {
+    margin-top: 10px;
+  }
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}

@@ -7,10 +7,14 @@ const SearchBar = ({ onSearchSubmit, setResults, setLoading, setTerm, term, setD
     const { urlTerm } = useParams()
 
     useEffect(() => {
-        if (urlTerm !== undefined) {
-            console.log('url: ' + urlTerm)
+        if ((urlTerm !== undefined) && (term === '') ) {
             setLoading(1)
+            document.title = `${urlTerm} - WikiFast!`
             setTerm(urlTerm)
+            setSearchBarTerm(urlTerm)
+
+        } else {
+            setLoading(0)
         }
     }, [urlTerm]) // eslint-disable-line 
 
@@ -19,13 +23,14 @@ const SearchBar = ({ onSearchSubmit, setResults, setLoading, setTerm, term, setD
             const timer = setTimeout(() => {
                 setTerm(debouncedTerm)
                 navigate(`results/${debouncedTerm}`)
-                setSearchBarTerm(debouncedTerm)
+                
                 document.title = `${debouncedTerm} - WikiFast!`
             }, 1000)
             return () => clearTimeout(timer)
-        } else {
-            setResults([])
-        }
+        } 
+        // else {
+        //     setResults([])
+        // }
     }, [debouncedTerm]) // eslint-disable-line 
 
     const handleChange = ({ target }) => {
@@ -35,11 +40,7 @@ const SearchBar = ({ onSearchSubmit, setResults, setLoading, setTerm, term, setD
             document.title = `WikiFast!`
             navigate('/')
         } else {
-            if (target.value === term) {
-                setLoading(0)
-            } else {
-                setLoading(1)
-            }
+            setLoading(1)
         }
         setSearchBarTerm(target.value)
         setDebouncedTerm(target.value)
@@ -57,4 +58,5 @@ const SearchBar = ({ onSearchSubmit, setResults, setLoading, setTerm, term, setD
         </div>
     )
 }
+
 export default SearchBar

@@ -10,7 +10,7 @@ const config = {
 }
 
 const searchQuery = memoize(async (query) => {
-    const response = await axios.get(`${baseUrl}/search/page?q=${query}&limit=10`, config)
+    const response = await axios.get(`${baseUrl}/search/page?q=${query}&limit=20`, config)
     return response.data
 })
 

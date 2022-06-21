@@ -18,9 +18,8 @@ const getImage = (result) => {
 }
 
 const Result = ({ result }) => {
-
-
     return (
+        <a href={`https://en.wikipedia.org/wiki/${result.key}`} target='_blank' rel="noreferrer" >
         <div className='result'>
             <div className='result-text'>
                 <div className='result-title'>{result.title}</div>
@@ -28,6 +27,7 @@ const Result = ({ result }) => {
             </div>
             {getImage(result)}
         </div>
+        </a>
     )
 }
 

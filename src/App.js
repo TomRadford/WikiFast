@@ -14,27 +14,31 @@ const App = () => {
   const [debouncedTerm, setDebouncedTerm] = useState('')
   const [searchBarTerm, setSearchBarTerm] = useState('')
 
-  
-
   const onSearchSubmit = async term => {
     const res = await wikiService.searchQuery(term)
     setResults(res.pages)
+  }
+
+
+  const handleTermChange = async () => {
+    setResults([])
+    setLoading(1)
+    await onSearchSubmit(term)
+    setSearchBarTerm(term)
     setLoading(0)
   }
 
   useEffect(() => {
     if (term !== '') {
-      setSearchBarTerm(term)
-      onSearchSubmit(term)
+      handleTermChange()
     }
   }, [term])  // eslint-disable-line 
 
-
   const reset = () => {
+    document.title = `WikiFast!`
     setDebouncedTerm('')
     setSearchBarTerm('')
     setLoading(0)
-    setResults([])
   }
 
   return (

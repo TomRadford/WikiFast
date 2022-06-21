@@ -13,7 +13,7 @@
   height: 120px;
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   background: rgba(19, 19, 19, 0.596);
   z-index: 100;
@@ -22,10 +22,7 @@
 
 .title {
   font-family: 'Archivo Black', sans-serif;
-}
-
-.title:hover {
-  cursor: pointer;
+  text-shadow: 1px 1px 2px black;
 }
 
 .main-content {
@@ -52,15 +49,11 @@
 .result-container {
   display: flex;
   flex-direction: column;
-  
-  
+
+
 }
 
 @media (max-width: 880px) {
-  .main-content {
-
-  }
-
   .welcome .lottie {
     width: 80%;
   }
@@ -68,6 +61,7 @@
   .title {
     font-size: 20pt;
   }
+
   .header {
     height: 110px;
   }
@@ -79,7 +73,7 @@
   align-items: center;
   margin-top: 25px;
   margin-bottom: 5px;
-  color:rgb(224, 224, 224);
+  color: rgb(224, 224, 224);
   margin-bottom: 25px;
 }
 
@@ -89,12 +83,16 @@
   .main-content {
     min-height: 400px;
   }
+
   .tom {
     margin-top: 10px;
   }
 }
 
-a, a:hover, a:focus, a:active {
+a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
   color: inherit;
 }

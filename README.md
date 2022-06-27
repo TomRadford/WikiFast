@@ -10,7 +10,7 @@ Created as a fun way to wrap my head around various concepts learnt though [Full
 
 ## How?
 
-I used React, Router and one or two packages to build this along with vanilla CSS. I wanted to wrap my hea around memoization and debouncing so that's been implemented here too. 
+I used React, Router and one or two packages to build this along with vanilla CSS. I wanted to wrap my head around memoization and debouncing so that's been implemented here too. 
 
 The memoization is very trival - having just wrapped the API query in Lodash's memoize function. 
 Debouncing has been done by setting a 1 second delay everytime the search bar value changes. 
